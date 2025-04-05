@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-quicksand bg-gradient-to-b from-game-blue to-black min-h-screen text-white;
+}
+
+.briefcase {
+  @apply relative bg-gradient-to-b from-game-gold to-yellow-600 rounded-lg shadow-case 
+         flex items-center justify-center font-bold text-black transition-all duration-300
+         hover:shadow-case-hover transform hover:-translate-y-1 cursor-pointer;
+}
+
+.briefcase-opened {
+  @apply bg-gradient-to-b from-gray-700 to-gray-900 text-white opacity-70 cursor-default
+         hover:shadow-case hover:transform-none;
+}
+
+.briefcase-selected {
+  @apply bg-gradient-to-b from-game-red to-red-800 text-white animate-pulse-gold;
+}
+
+.money-value {
+  @apply px-4 py-2 rounded-md font-bold text-center;
+}
+
+.money-value-red {
+  @apply bg-game-red text-white;
+}
+
+.money-value-blue {
+  @apply bg-game-blue text-white;
+}
+
+.money-value-eliminated {
+  @apply opacity-40 line-through;
+}
+
+.banker-offer {
+  @apply bg-gradient-to-r from-game-gold to-yellow-500 text-black font-bold text-2xl md:text-4xl
+         px-8 py-4 rounded-xl shadow-offer animate-float;
+}
+
+.btn {
+  @apply px-6 py-3 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105;
+}
+
+.btn-deal {
+  @apply bg-green-600 hover:bg-green-700 text-white;
+}
+
+.btn-no-deal {
+  @apply bg-game-red hover:bg-red-800 text-white;
+}
+
+.btn-start {
+  @apply bg-game-gold hover:bg-yellow-500 text-black;
+}
